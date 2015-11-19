@@ -1,0 +1,15 @@
+<h1>Sign Up!</h1>
+  <form action="/users" method="post">
+
+    <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+
+    <label>Username</label>
+    <input type="text" name='user[user_name]' value='<%= @user.user_name%>'>
+    <br>
+    <label>Password</label>
+    <input type='text' name='user[password]' value='<%= @user.password %>'>
+    <br>
+
+    <input type='submit' value='Create User!'>
+
+  </form>
